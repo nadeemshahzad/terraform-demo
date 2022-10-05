@@ -6,6 +6,7 @@ projects:
        when_modified: ["*"]
 
 policies:
+  conftest_version: 0.34.0
   owners:
     users:
       - nadeemshahzad

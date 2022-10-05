@@ -17,12 +17,6 @@ provider "aws" {
 }
 
 # Terraform settings block to define settings of terraform and pin provider (aws) version 
-terraform {
-  required_version = ">= 0.12"
-  required_providers {
-    aws = " 3.23.0"
-  }
-}
 
 
 

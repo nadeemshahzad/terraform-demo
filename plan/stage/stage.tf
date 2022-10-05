@@ -33,3 +33,9 @@ module "stage_vpc" {
   vpc_name = var.stage_vpc_name
   vpc_cidr_block = var.stage_cidr_block
 }
+
+module "stage_vpc_001" {
+  source = "../../modules/vpc"
+  vpc_name = var.stage_vpc_name
+  vpc_cidr_block = var.stage_cidr_block
+}

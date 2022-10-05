@@ -5,12 +5,12 @@ projects:
    autoplan: 
        when_modified: ["*"]
 
+
 policies:
-  conftest_version: "0.34.0"
   owners:
     users:
       - nadeemshahzad
   policy_sets:
-    - name: Standard Policies (see https://opa-tf.techdocs.2u.com)
-      path: policy
+    - name: Standard Policies
+      path: terraform-demo/policy
       source: local

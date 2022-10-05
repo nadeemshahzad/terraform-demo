@@ -1,0 +1,29 @@
+package main
+
+import data.lib.util
+
+expected_tags := {
+	"group",
+	"portfolio",
+	"source",
+	"businessunit"
+}
+
+missing_default_tag_keys(changeset) = missing_keys {
+	expected_keys := {expect | expected_tags[expect]}
+	provided_keys := {tag | changeset.change.after.tags_all[tag]}
+	missing_keys := expected_keys - provided_keys
+}
+
+deny[reason] {
+	changeset := input.resource_changes[_]
+	changeset.mode == "managed"
+	util.has_field(changeset.change.after, "tags_all")
+	missing_keys := missing_default_tag_keys(changeset)
+	count(missing_keys) > 0
+
+	reason := sprintf("[T001] Resource %s is missing default tags: '%s'.", [
+		changeset.address,
+		concat(", ", missing_keys)
+	])
+}

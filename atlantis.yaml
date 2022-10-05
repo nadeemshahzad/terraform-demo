@@ -4,3 +4,12 @@ projects:
  - dir: plan/atlantis/
    autoplan: 
        when_modified: ["*"]
+policies:
+  conftest_version: "0.25.0"
+  owners:
+    users:
+      - nadeemshahzad
+  policy_sets:
+    - name: Standard Policies (see https://opa-tf.techdocs.2u.com)
+      path: policy
+      source: local

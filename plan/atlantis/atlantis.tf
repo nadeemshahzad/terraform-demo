@@ -12,3 +12,9 @@ module "atlantis_vpc" {
   vpc_name = var.atlantis_vpc_name
   vpc_cidr_block = var.atlantis_cidr_block
 }
+
+module "atlantis_vpc_001" {
+  source = "../../modules/vpc"
+  vpc_name = var.atlantis_vpc_name
+  vpc_cidr_block = var.atlantis_cidr_block
+}

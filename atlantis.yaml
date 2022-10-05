@@ -12,5 +12,5 @@ policies:
       - nadeemshahzad
   policy_sets:
     - name: Standard Policies
-      path: terraform-demo/policy
+      path: /tmp/policy
       source: local

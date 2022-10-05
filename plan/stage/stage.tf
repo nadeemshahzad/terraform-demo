@@ -1,5 +1,5 @@
 # Resource example
-resource "aws_iam_user" "stage_demo" {
+resource "aws_iam_user" "stage_demo1" {
      name = "stage-demo-00001"   # Required argument
      path = "/sre/"              # Optional argument
 }

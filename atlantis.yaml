@@ -4,13 +4,3 @@ projects:
  - dir: plan/atlantis/
    autoplan: 
        when_modified: ["*"]
-
-policies:
-  conftest_version: 0.34.0
-  owners:
-    users:
-      - nadeemshahzad
-  policy_sets:
-    - name: Standard Policies
-      path: /tmp/policy
-      source: local

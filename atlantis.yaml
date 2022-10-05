@@ -4,6 +4,7 @@ projects:
  - dir: plan/atlantis/
    autoplan: 
        when_modified: ["*"]
+
 policies:
   conftest_version: "0.25.0"
   owners:

@@ -5,7 +5,6 @@ projects:
    autoplan: 
        when_modified: ["*"]
 
-
 policies:
   owners:
     users:

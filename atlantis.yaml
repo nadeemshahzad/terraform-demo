@@ -1,7 +1,7 @@
 version: 3
 automerge: true
 projects:
- - dir: plan/atlantis/
+ - dir: plan/*
    autoplan: 
        when_modified: ["*"]
 

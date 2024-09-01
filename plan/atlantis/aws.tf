@@ -7,6 +7,8 @@ provider "aws" {
   region  = var.aws_region
 }
 
+
+
 terraform {
   backend "s3" {
     bucket                  = "nadeem-state-0001"

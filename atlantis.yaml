@@ -1,5 +1,5 @@
 version: 3
 projects:
-- dir: plan/*
+- dir: .
   autoplan:
     when_modified: ["*"]

@@ -1,4 +1,3 @@
-
 # Resource example
 resource "aws_iam_user" "stage_demo" {
      name = "stage-demo-00001"   # Required argument

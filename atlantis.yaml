@@ -2,5 +2,15 @@ version: 3
 automerge: true
 projects:
 - dir: plan/atlantis/
+  workflow: test
+  workspace: test
   autoplan:
     when_modified: ["*"]
+workflows:
+  test:
+    plan:
+      steps:
+      - init
+      - plan:
+          extra_args: ["-var-file", "./prod.tfvars"]
+
